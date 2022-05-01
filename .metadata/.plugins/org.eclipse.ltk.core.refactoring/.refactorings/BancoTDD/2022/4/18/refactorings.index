@@ -1,0 +1,5 @@
+1651143257658	Rename compilation unit 'BancoTTDTest.java'
+1651148001825	Move compilation unit
+1651230082171	Encapsulate field 'numeroConta'
+1651232104012	Rename local variable 'valor'
+1651232122676	Rename local variable 'saque'

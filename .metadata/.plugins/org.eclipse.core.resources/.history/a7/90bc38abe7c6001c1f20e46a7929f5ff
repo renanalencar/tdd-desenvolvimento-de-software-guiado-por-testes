@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class CaixaEletronico {
+
+	public String logar() {
+		return "Usuário autenticado.";
+	}
+
+//	public Object sacar() {
+//		return "Usuário sacou.";
+//	}
+//
+//	public Object depositar() {
+//		return "Usuário depositou.";
+//	}
+//
+//	public Object saldo() {
+//		return "Saldo é...";
+//	}
+
+}

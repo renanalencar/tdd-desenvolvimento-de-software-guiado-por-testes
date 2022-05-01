@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import java.io.IOException;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import br.dev.rca.Armazenamento;
+
+/**
+ * @author renan
+ *
+ */
+class TesteArmazenamento {
+	
+//	@Test
+//	void testeArmazenamentoRecuperarPontos() {
+//		Armazenamento armazenamento = new Armazenamento("armazenamento.json");
+//		Assertions.assertEquals(1, armazenamento.recuperarPontos("guerra", "estrela"));
+//	}
+
+	@Test
+	void testeArmazenamentoArmazenarPontos() {
+		Armazenamento armazenamento = new Armazenamento("armazenamento.json");
+		armazenamento.armazenarPontos("guerra", "estrela", 1);
+//		Assertions.assertThrows(RuntimeException.class, armazenamento.armazenarPontos("guerra", "estrela", 1));
+	}
+
+}

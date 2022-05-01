@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import org.junit.jupiter.api.function.Executable;
+
+import br.dev.rca.IArmazenamento;
+
+/**
+ * @author renan
+ *
+ */
+public class Placar {
+
+	public void adicionaArmazenamento(IArmazenamento armazenamento) {
+		
+	}
+
+	public Executable registrarPontos(String string, String string2, int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

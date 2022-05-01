@@ -1,0 +1,13 @@
+1651274624249	Delete element
+1651313947926	Move compilation unit
+1651313953598	Move compilation unit
+1651313958572	Move compilation unit
+1651327675201	Delete element
+1651328114538	Rename field 'nomeArquivo'
+1651328199124	Infer generic type arguments
+1651329807516	Infer generic type arguments
+1651351222770	Move member 'gravarEmArquivo'
+1651351252590	Move member 'lerDeArquivo'
+1651353595036	Extract method 'extracted'
+1651353613232	Rename method 'extracted'
+1651353631566	Rename method 'sortMapDescending'

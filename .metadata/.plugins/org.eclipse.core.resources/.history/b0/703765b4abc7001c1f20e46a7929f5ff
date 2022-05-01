@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class ContaCorrente {
+	
+	private String numeroConta;
+	private double saldo;
+
+	public ContaCorrente(String numero, double valor) {
+		this.numeroConta = numero;
+		this.saldo = valor;
+	}
+
+	public Double getSaldo() {
+		return this.saldo;
+	}
+
+}

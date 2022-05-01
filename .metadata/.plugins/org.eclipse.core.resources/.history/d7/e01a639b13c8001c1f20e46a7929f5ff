@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+/**
+ * @author renan
+ *
+ */
+public class PlacarException extends RuntimeException {
+	public PlacarException(String mensagem) {
+		super(mensagem);
+	}
+}

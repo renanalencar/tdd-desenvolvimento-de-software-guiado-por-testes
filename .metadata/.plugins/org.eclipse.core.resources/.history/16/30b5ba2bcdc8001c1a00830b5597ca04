@@ -1,0 +1,14 @@
+package br.dev.rca.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TesteIntegracao {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

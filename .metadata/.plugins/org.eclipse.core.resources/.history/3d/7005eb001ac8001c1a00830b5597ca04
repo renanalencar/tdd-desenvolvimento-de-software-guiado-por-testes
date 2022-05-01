@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import br.dev.rca.IArmazenamento;
+
+/**
+ * @author renan
+ *
+ */
+public class Placar {
+	private IArmazenamento armazenamento;
+
+	public void adicionaArmazenamento(IArmazenamento armazenamento) {
+		this.armazenamento = armazenamento;
+	}
+
+	public void registrarPontos(String usuario, String tipo, int valor) {
+		this.armazenamento.armazenarPontos(usuario, tipo, valor);
+	}
+
+	public Map<String, Integer> retornarPontosDoUsuario(String usuario) {
+		Map<String, Integer> pontos = new HashMap<>();
+
+		for (String tipo : this.armazenamento.retornarTodosTiposPontosUmUsuario(usuario)) {
+			pontos.put(tipo, this.armazenamento.recuperarPontos(usuario, tipo));
+		}
+
+		return pontos;
+	}
+
+	public Map<String, Integer> retornarRankingTipo(String tipo) {
+		Map<String, Integer> ranking = new HashMap<>();
+		for (String usuario : this.armazenamento.retornarTodosUsuariosComPonto()) {
+			Map<String, Integer> pontos = this.retornarPontosDoUsuario(usuario);
+			if (pontos.containsKey(tipo))
+				ranking.put(usuario, pontos.get(tipo));
+		}
+		return ranking;
+	}
+
+}

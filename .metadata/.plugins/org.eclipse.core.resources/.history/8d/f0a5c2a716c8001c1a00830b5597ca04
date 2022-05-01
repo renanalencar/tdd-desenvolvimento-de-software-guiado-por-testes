@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import java.util.Map;
+
+import br.dev.rca.IArmazenamento;
+
+/**
+ * @author renan
+ *
+ */
+public class Placar {
+
+	public void adicionaArmazenamento(IArmazenamento armazenamento) {
+
+	}
+
+	public void registrarPontos(String usuario, String tipo, int valor) {
+
+	}
+
+	public Map<String, Integer> retornarPontosDoUsuario(String string) {
+		
+		return null;
+	}
+
+}

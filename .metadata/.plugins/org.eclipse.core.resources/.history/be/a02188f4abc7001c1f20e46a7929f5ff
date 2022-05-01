@@ -1,0 +1,74 @@
+package br.dev.rca.test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import br.dev.rca.CaixaEletronico;
+import br.dev.rca.MockHardware;
+import br.dev.rca.MockServicoRemoto;
+import br.dev.rca.MockServicoRemotoComFalha;
+
+class TesteCaixaEletronico {
+
+	@Test
+	void testeCaixaEletronicoLogarComSucesso() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico();
+		MockHardware mockHardware = new MockHardware();
+		caixaEletronico.adicionarHardware(mockHardware);
+		MockServicoRemoto mockServicoRemoto = new MockServicoRemoto();
+		caixaEletronico.adicionarServicoRemoto(mockServicoRemoto);
+		Assertions.assertEquals("Usuário autenticado.", caixaEletronico.logar());
+	}
+	
+	@Test
+	void testeCaixaEletronicoLogarcomFalha() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico();
+		MockHardware mockHardware = new MockHardware();
+		caixaEletronico.adicionarHardware(mockHardware);
+		MockServicoRemotoComFalha mockServicoRemoto = new MockServicoRemotoComFalha();
+		caixaEletronico.adicionarServicoRemoto(mockServicoRemoto);
+		Assertions.assertEquals("Não foi possível autenticar usuário.", caixaEletronico.logar());
+	}
+	
+	@Test
+	void testeCaixaEletronicoSacarComSucesso() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico();
+		MockHardware mockHardware = new MockHardware();
+		caixaEletronico.adicionarHardware(mockHardware);
+		MockServicoRemoto mockServicoRemoto = new MockServicoRemoto();
+		caixaEletronico.adicionarServicoRemoto(mockServicoRemoto);
+		caixaEletronico.logar();
+		Assertions.assertEquals("Retire o seu dinheiro.", caixaEletronico.sacar());
+	}
+	
+//	@Test
+//	void testeCaixaEletronicoSacar() {
+//		CaixaEletronico caixaEletronico = new CaixaEletronico();
+//		Assertions.assertEquals("Usuário sacou.", caixaEletronico.sacar());
+//	}
+//	
+//	@Test
+//	void testeCaixaEletronicoDepositar() {
+//		CaixaEletronico caixaEletronico = new CaixaEletronico();
+//		Assertions.assertEquals("Usuário depositou.", caixaEletronico.depositar());
+//	}
+//	
+//	@Test
+//	void testeCaixaEletronicoSaldo() {
+//		CaixaEletronico caixaEletronico = new CaixaEletronico();
+//		Assertions.assertEquals("Saldo é...", caixaEletronico.saldo());
+//	}
+//	
+//	@Test
+//	void testeCriarContaCorrente() {
+//		ContaCorrente contaCorrente = new ContaCorrente("1234", 100.0);
+//		Assertions.assertEquals(100.0, contaCorrente.getSaldo());
+//	}
+//	
+//	@Test
+//	void testeCaixaEletronicoLogarMock() {
+//		CaixaEletronico caixaEletronico = new CaixaEletronico();
+//		Assertions.assertEquals("Usuário logado.", caixaEletronico.logar());
+//	}
+
+}

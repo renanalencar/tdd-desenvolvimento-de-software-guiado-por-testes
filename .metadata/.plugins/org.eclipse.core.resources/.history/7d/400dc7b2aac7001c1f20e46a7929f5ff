@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class CaixaEletronico {
+
+	private Hardware hardware;
+	private ServicoRemoto servicoRemoto;
+	private ContaCorrente contaCorrente;
+
+	public String logar() {
+		this.contaCorrente = servicoRemoto.recuperarConta(hardware.pegarNumeroDaContaCartao());
+		
+		if(contaCorrente != null) 
+			return "Usuário autenticado.";
+		return "Não foi possível autenticar usuário.";
+	}
+
+	public void adicionarHardware(Hardware hardware) {
+		this.hardware = hardware;
+
+	}
+
+	public void adicionarServicoRemoto(ServicoRemoto servicoRemoto) {
+		this.servicoRemoto = servicoRemoto;
+
+	}
+
+}

@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class ServicoRemotoException extends RuntimeException {
+	public ServicoRemotoException(String mensagem) {
+		super(mensagem);
+	}
+}

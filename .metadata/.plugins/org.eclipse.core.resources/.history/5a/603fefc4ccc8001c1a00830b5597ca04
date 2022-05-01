@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class ValorPontoException extends RuntimeException {
+	public ValorPontoException(String mensagem) {
+		super(mensagem);
+	}
+}

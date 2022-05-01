@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class MockServicoRemoto implements ServicoRemoto {
+
+}

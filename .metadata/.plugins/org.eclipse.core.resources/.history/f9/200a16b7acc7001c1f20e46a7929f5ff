@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class MockServicoRemoto implements ServicoRemoto {
+
+	@Override
+	public ContaCorrente recuperarConta(String numeroContaCorrente) {
+		return new ContaCorrente("123", 100.0);
+	}
+
+	@Override
+	public void persistirConta(ContaCorrente contaCorrente) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class MockHardwareComFalha implements Hardware {
+
+	@Override
+	public String pegarNumeroDaContaCartao() {
+		return null;
+	}
+
+	@Override
+	public void entregarDinheiro(double valor) {
+
+	}
+
+	@Override
+	public void lerEnvelope(double valor) {
+		
+	}
+
+}

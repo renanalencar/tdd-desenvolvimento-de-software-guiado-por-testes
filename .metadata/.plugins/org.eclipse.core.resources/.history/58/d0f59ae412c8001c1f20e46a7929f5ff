@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import br.dev.rca.IArmazenamento;
+
+/**
+ * @author renan
+ *
+ */
+class TestePlacar {
+
+	@Test
+	void testePlacarRegistrar() {
+		IArmazenamento armazenamento = new MockArmazenamento("arquivo.json");
+		Placar placar = new Placar();
+		placar.adicionaArmazenamento(armazenamento);
+		Assertions.assertEquals(1, placar.registrarPonto("usuario", "estrela"));
+	}
+
+}

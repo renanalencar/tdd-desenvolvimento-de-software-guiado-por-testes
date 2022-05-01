@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * @author renan
+ *
+ */
+class TestePlacar {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class CaixaEletronico {
+
+	public static Object logar() {
+		return "Usuário logado.";
+	}
+
+}

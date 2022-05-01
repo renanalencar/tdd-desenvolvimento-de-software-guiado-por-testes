@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class CaixaEletronico {
+	
+	private Hardware hardware;
+	private ServicoRemoto servicoRemoto;
+
+	public String logar() {
+		return "Usuário autenticado.";
+	}
+
+	public void adicionarHardware(Hardware hardware) {
+		this.hardware = hardware;
+		
+	}
+
+	public void adicionarServicoRemoto(ServicoRemoto servicoRemoto) {
+		this.servicoRemoto = servicoRemoto;
+		
+	}
+
+}

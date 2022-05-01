@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public interface ServicoRemoto {
+	public ContaCorrente recuperarConta(String numeroContaCorrente);
+	public void persistirConta(ContaCorrente contaCorrente);
+}

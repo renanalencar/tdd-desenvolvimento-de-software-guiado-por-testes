@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class CaixaEletronico {
+
+	private Hardware hardware;
+	private ServicoRemoto servicoRemoto;
+	private ContaCorrente contaCorrente;
+
+	public void adicionarHardware(Hardware hardware) {
+		this.hardware = hardware;
+		
+	}
+	
+	public void adicionarServicoRemoto(ServicoRemoto servicoRemoto) {
+		this.servicoRemoto = servicoRemoto;
+		
+	}
+	
+	public String logar() {
+		this.contaCorrente = servicoRemoto.recuperarConta(hardware.pegarNumeroDaContaCartao());
+		
+		if(contaCorrente != null) 
+			return "Usuário autenticado.";
+		return "Não foi possível autenticar usuário.";
+	}
+	
+	public String saldo() {
+		return String.format("O saldo é R$%.2f", this.contaCorrente.getSaldo());
+	}
+
+	public String sacar(double valor) {
+		if(valor <= this.contaCorrente.getSaldo()) {
+			double novoSaldo = this.contaCorrente.getSaldo() - valor;
+			this.hardware.entregarDinheiro(valor);
+			this.servicoRemoto.persistirConta(this.contaCorrente, novoSaldo);
+			return "Retire o seu dinheiro.";
+		}
+		
+		return "Saldo insuficiente.";
+	}
+
+	public Object depositar(double d) {
+		return "Depósito recebido com sucesso.";
+	}
+
+	
+
+}

@@ -1,0 +1,99 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+import java.io.IOException;
+import java.io.Reader;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.google.gson.Gson;
+
+/**
+ * @author renan
+ *
+ */
+public class Armazenamento implements IArmazenamento {
+	private String arquivo;
+	private Map<String, Map<String, Integer>> placares;
+
+	public Armazenamento(String nomeArquivo) {
+		this.arquivo = nomeArquivo;
+		placares = new HashMap<>();
+	}
+
+	@Override
+	public void armazenarPontos(String usuario, String tipo, int valor) {
+		Map<String, Integer> pontos = new HashMap<>();
+		lerDeArquivo();
+//		pontos = this.placares.get(usuario);
+//		String aux = "" + pontos.get(tipo);
+//		double d = Double.valueOf(aux);
+//		valor += (int) d;
+//		pontos.put(tipo, valor);
+		this.placares.put(usuario, pontos);
+		gravarEmArquivo();
+	}
+
+	@Override
+	public int recuperarPontos(String usuario, String tipo) {
+		lerDeArquivo();
+		Map<String, Integer> pontos = this.placares.get(usuario);
+		String aux = "" + pontos.get(tipo);
+		double d = Double.valueOf(aux);
+		return (int) d;
+	}
+
+	@Override
+	public List<String> retornarTodosUsuariosComPonto() {
+		List<String> usuariosComPontos = new ArrayList<>();
+		for (String usuario : this.placares.keySet()) {
+			usuariosComPontos.add(usuario);
+		}
+		return usuariosComPontos;
+	}
+
+	@Override
+	public List<String> retornarTodosTiposPontosUmUsuario(String usuario) {
+		List<String> tipos = new ArrayList<>();
+		Map<String, Integer> placar = this.placares.get(usuario);
+		for (String tipo : placar.keySet()) {
+			tipos.add(tipo);
+		}
+		return tipos;
+	}
+
+	private void gravarEmArquivo() {
+		try {
+			Gson gson = new Gson();
+
+			Writer writer = Files.newBufferedWriter(Paths.get(this.arquivo));
+			gson.toJson(placares, writer);
+
+			writer.close();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	private void lerDeArquivo() {
+		try {
+			Gson gson = new Gson();
+
+			Reader reader = Files.newBufferedReader(Paths.get(this.arquivo));
+			this.placares = gson.fromJson(reader, Map.class);
+			reader.close();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+}

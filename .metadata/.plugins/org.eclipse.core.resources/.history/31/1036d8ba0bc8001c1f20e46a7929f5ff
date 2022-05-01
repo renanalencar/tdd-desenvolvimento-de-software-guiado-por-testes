@@ -1,0 +1,28 @@
+{
+	"armazenamento": [
+		"placar":
+		{
+			"usuario": "guerra",
+			"pontos": {
+				"moeda": "1",
+				"": "1",
+				"estrela": "1",
+				"topico": "1",
+				"comentario": "1",
+				"curtida": "1"
+			}
+		},
+		"placar":
+		{
+			"usuario": "fernandes",
+			"pontos": {
+				"moeda": "1",
+				"": "1",
+				"estrela": "1",
+				"topico": "1",
+				"comentario": "1",
+				"curtida": "1"
+			}
+		}
+	]
+}

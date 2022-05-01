@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import br.dev.rca.IArmazenamento;
+
+/**
+ * @author renan
+ *
+ */
+public class Placar {
+
+	public void adicionaArmazenamento(IArmazenamento armazenamento) {
+
+	}
+
+	public void registrarPontos(String usuario, String tipo, int valor) {
+
+	}
+
+}

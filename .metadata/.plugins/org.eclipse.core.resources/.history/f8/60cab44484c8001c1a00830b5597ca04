@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import br.dev.rca.Armazenamento;
+
+/**
+ * @author renan
+ *
+ */
+class TesteArmazenamento {
+
+	@Test
+	void testeArmazenamentoArmazenarPontos() {
+		Armazenamento armazenamento = new Armazenamento("armazenamento.json");
+		Assertions.assertEquals(1, armazenamento.armazenarPontos("guerra", "estrela", 1));
+	}
+
+}

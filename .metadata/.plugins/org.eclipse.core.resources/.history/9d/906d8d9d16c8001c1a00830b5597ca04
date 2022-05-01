@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+import java.util.List;
+
+/**
+ * @author renan
+ *
+ */
+public interface IArmazenamento {
+	public void armazenarPontos(String usuario, String tipo);
+	public int recuperarPontos(String usario, String tipo);
+	public List<String> retornarTodosUsuariosComPonto();
+	public List<String> retornarTodosTiposPontosUmUsuario(String usario);		
+}

@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package br.dev.rca;
+
+/**
+ * @author renan
+ *
+ */
+public class CaixaEletronico {
+
+	public String logar() {
+		return "Usuário autenticado.";
+	}
+
+	public void adicionarHardware(MockHardware mockHardware) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void adicionarServicoRemoto(MockServicoRemoto mockServicoRemoto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

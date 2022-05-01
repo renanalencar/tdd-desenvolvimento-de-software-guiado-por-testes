@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import br.dev.rca.Armazenamento;
+
+/**
+ * @author renan
+ *
+ */
+public class Placar {
+
+	public void adicionaArmazenamento(Armazenamento armazenamento) {
+		
+	}
+
+}

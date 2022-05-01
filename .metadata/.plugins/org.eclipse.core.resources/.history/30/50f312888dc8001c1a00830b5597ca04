@@ -1,0 +1,16 @@
+{
+  "guerra": {
+    "moeda": "1",
+		"estrela": "2",
+		"topico": "3",
+		"comentario": "4",
+		"curtida": "5"
+  },
+  "fernandes": {
+    "moeda": "1",
+		"estrela": "5",
+		"topico": "10",
+		"comentario": "15",
+		"curtida": "20"
+  }
+}

@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package br.dev.rca.test;
+
+import java.util.List;
+
+import br.dev.rca.IArmazenamento;
+
+/**
+ * @author renan
+ *
+ */
+public class MockArmazenamento implements IArmazenamento {
+
+	@Override
+	public void armazenarPontos(String usuario, String tipo) {
+
+	}
+
+	@Override
+	public int recuperarPontos(String usario, String tipo) {
+
+		return 0;
+	}
+
+	@Override
+	public List<String> retornarTodosUsuariosComPonto() {
+
+		return null;
+	}
+
+	@Override
+	public List<String> retornarTodosTiposPontosUmUsuario(String usario) {
+
+		return null;
+	}
+
+}
