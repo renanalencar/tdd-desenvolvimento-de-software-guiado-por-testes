@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 import br.dev.rca.CaixaEletronico;
 import br.dev.rca.Hardware;
 import br.dev.rca.HardwareException;
+import br.dev.rca.MockHardware;
+import br.dev.rca.MockHardwareComFalha;
+import br.dev.rca.MockServicoRemoto;
+import br.dev.rca.MockServicoRemotoComFalha;
 import br.dev.rca.ServicoRemoto;
 import br.dev.rca.ServicoRemotoException;
 

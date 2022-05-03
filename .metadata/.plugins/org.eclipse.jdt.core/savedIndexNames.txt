@@ -8,8 +8,8 @@ INDEX VERSION 1.131+C:\Users\renan\Sites\tdd-desenvolvimento-de-software-guiado-
 2346895512.index
 2341465545.index
 2200875372.index
-488890021.index
 2637849742.index
+488890021.index
 2538946849.index
 4132522675.index
 711050520.index
@@ -23,8 +23,8 @@ INDEX VERSION 1.131+C:\Users\renan\Sites\tdd-desenvolvimento-de-software-guiado-
 892217611.index
 3720716507.index
 2702014776.index
-561689436.index
 1517252689.index
+561689436.index
 4026202671.index
 1148937498.index
 3530021387.index
